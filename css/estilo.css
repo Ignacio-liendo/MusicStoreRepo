@@ -72,6 +72,22 @@ aside {
     top: 20px;
     left: 20px;
 }
+/*-------------PAGINA CONTACTO-------------*/
+/* Contenedor principal para dividir en dos columnas */
+.container_contacto {
+    display: flex; /*el contenedor padre ya tiene FLEX ACTIVADO*/
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;     
+}
+.contact {
+    flex: 1; /*sirve para que ocupen el espacio disponible, en este caso los dos ocupan 50%*/
+}
+.div-map {
+    flex: 1;
+}
+/*---------------------PAGINA CONTACTO-------------------*/
 /*---------------FOOTER-------------*/ 
 footer {
     grid-area: footer;
@@ -85,5 +101,5 @@ footer {
     position: relative;
     top: 50%;
     left: 45%;
-    text-decoration: none;
 }
+/*-------------------FOOTER------------------*/
