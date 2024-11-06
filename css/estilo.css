@@ -1,8 +1,11 @@
-*{
+/* Ajustes generales */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Ajustes de grid para la estructura general */
 .container {
     display: grid;
     grid-template-areas: 
@@ -13,72 +16,90 @@
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
-/*--------------------HEADER-------------------------*/
+
+/* Estilos del header */
 header {
     grid-area: header;
     background-color: #2b2c2b;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     font-size: 20px;
+    position: relative;
 }
-.logo {    
+
+/* Logo y nombre de la tienda */
+.logo {
     position: absolute; 
     top: 10px; 
     left: 10px; 
     max-width: 115px; 
     border-radius: 50%; 
 }
-.Nombre_tienda{
+.Nombre_tienda {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-nav {
-    margin-top: 20px; 
+
+/* Menú de navegación */
+.navbar-collapse {
+    justify-content: center; /* Centra los items horizontalmente */
 }
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
-nav ul li {  
-    display: inline;
-    margin-right: 10px;
+nav ul li {
+    margin-right: 15px;
 }
-nav ul li a {  
-    color: rgb(255, 255, 255);
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
     border-radius: 20px;
-    padding: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
 }
-.hover_li :hover{ 
+.hover_li:hover a { 
     background-color: #ffffff;
     color: #2b2c2b;
 }
-/*----------------------END DEL HEADER--------------------*/
-body{
-    margin: 0;
-}
+
+/* Estilos del main */
 main {
     grid-area: main;
     background-color: #ffffff;
-    color: rgb(44, 44, 44);
+    color: #2c2c2c;
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    position: relative;
     font-family: fantasy;
 }
-section{
+
+/* Tarjetas en el main */
+section {
     display: flex;
     flex-wrap: wrap;                
     padding: 10px;
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
 }
-.card{
+.card {
     margin: 8px;
+    width: 18rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
 }
-/*-------------PAGINA CONTACTO-------------*/
-/* Contenedor principal para dividir en dos columnas */
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-body {
+    padding: 10px;
+    text-align: left;
+}
+/* Contacto */
 .container_contacto {
     display: flex; /*el contenedor padre ya tiene FLEX ACTIVADO*/
     justify-content: space-between;
@@ -92,8 +113,7 @@ section{
 .div-map {
     flex: 1;
 }
-/*---------------------PAGINA CONTACTO-------------------*/
-/*---------------FOOTER-------------*/ 
+/* Estilos del footer */
 footer {
     grid-area: footer;
     background-color: #747474fa;
@@ -102,9 +122,51 @@ footer {
     padding: 20px;
     font-size: 18px;
 }
-.contact_logos{
+.contact_logos {
+    margin: 0 10px;
     position: relative;
-    top: 50%;
     left: 45%;
 }
-/*-------------------FOOTER------------------*/
+
+/* Media Queries para adaptabilidad */
+
+/* Para tablets (pantallas de 768px a 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    .contact_logos {
+        top: auto;
+        left: auto;
+    }
+}
+
+/* Para móviles (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .container {
+        padding: 5px;
+    }
+    header {
+        padding: 10px;
+    }
+    nav ul li {
+        margin-right: 0;
+    }
+    .Nombre_tienda {
+        font-size: 18px;
+    }
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    footer p, footer a {
+        font-size: 14px;
+    }
+}
