@@ -44,6 +44,20 @@ header {
 .navbar-collapse {
     justify-content: center; /* Centra los items horizontalmente */
 }
+/* Cambiar color de fondo y borde del botón de toggle */
+.navbar-toggler {
+    background-color: #2b2c2b !important; /* Cambia esto al color que prefieras */
+    border-color: #ffffff !important; /* Color del borde */
+}
+/* Hover para el botón toggle */
+.navbar-toggler:hover {
+    background-color: #424242; /* Cambia el color de fondo en hover */
+    border-color: #9b9b9b;
+}
+/* Cambiar el color del ícono dentro del botón toggle */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
 nav ul {
     list-style: none;
     padding: 20px;
