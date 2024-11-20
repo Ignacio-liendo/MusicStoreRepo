@@ -1,10 +1,22 @@
 @charset "UTF-8";
-/* Mixins */
 /* Ajustes generales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Aplicando un bucle para asignar colores desde un map */
+header {
+  background-color: #2b2c2b;
+}
+
+footer {
+  background-color: rgba(116, 116, 116, 0.9803921569);
+}
+
+nav {
+  background-color: rgba(87, 87, 87, 0.3215686275);
 }
 
 /* Ajustes de grid para la estructura general */
@@ -19,7 +31,6 @@
 /* Estilos del header */
 header {
   grid-area: header;
-  background-color: #2b2c2b;
   color: #ffffff;
   text-align: center;
   padding: 20px;
@@ -49,8 +60,8 @@ header .Nombre_tienda {
   border-color: #ffffff !important;
 }
 .navbar-toggler:hover {
-  background-color: #424242;
-  border-color: #9b9b9b;
+  background-color: rgb(17.7931034483, 18.2068965517, 17.7931034483);
+  border-color: white;
 }
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
@@ -82,7 +93,7 @@ nav ul li.hover_li:hover a {
 
 /* Estilos del main */
 h1 {
-  background-color: rgba(128, 128, 128, 0.177);
+  background-color: rgba(128, 128, 128, 0);
 }
 
 .titulo_destacados {
@@ -98,7 +109,20 @@ section {
   justify-content: center;
   align-items: center;
   font-family: "Times New Roman", Times, serif;
-  background-color: rgba(128, 128, 128, 0.177);
+  background-color: rgba(128, 128, 128, 0);
+  /* Bucle para generar diferentes estilos de tarjetas */
+}
+section .card:nth-child(1) {
+  border: 2px solid rgba(153.5, 153.5, 153.5, 0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+section .card:nth-child(2) {
+  border: 2px solid rgba(179, 179, 179, 0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+section .card:nth-child(3) {
+  border: 2px solid rgba(204.5, 204.5, 204.5, 0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 section .card {
   margin: 8px;
@@ -136,7 +160,6 @@ section .card .card-body {
 /* Estilos del footer */
 footer {
   grid-area: footer;
-  background-color: rgba(116, 116, 116, 0.9803921569);
   color: rgba(255, 255, 255, 0.9803921569);
   text-align: center;
   padding: 20px;
