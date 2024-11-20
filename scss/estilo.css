@@ -77,11 +77,6 @@ nav ul li.hover_li:hover a {
 }
 
 /* Estilos del main */
-.titulo_destacados {
-  font-family: fantasy;
-  text-align: center;
-}
-
 section {
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +86,7 @@ section {
 }
 section .card {
   margin: 8px;
-  flex: 1 1 calc(18rem + 16px); /* Ajusta el ancho para que se adapte dinámicamente */
-  max-width: 18rem; /* Asegura que las tarjetas no se expandan demasiado */
+  height: 100%;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -173,6 +167,4 @@ footer .contact_logos {
   footer p, footer a {
     font-size: 14px;
   }
-}
-
-/*# sourceMappingURL=estilo.css.map */
+}/*# sourceMappingURL=estilo.css.map */
