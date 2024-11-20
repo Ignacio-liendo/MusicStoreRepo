@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Mixins */
 /* Ajustes generales */
 * {
   margin: 0;
@@ -9,7 +10,7 @@
 /* Ajustes de grid para la estructura general */
 .container {
   display: grid;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header main footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
@@ -38,7 +39,9 @@ header .Nombre_tienda {
 
 /* Menú de navegación */
 .navbar-collapse {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-toggler {
@@ -58,6 +61,7 @@ nav ul {
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: rgba(87, 87, 87, 0.3215686275);
   border-radius: 10px;
 }
@@ -77,6 +81,10 @@ nav ul li.hover_li:hover a {
 }
 
 /* Estilos del main */
+h1 {
+  background-color: rgba(128, 128, 128, 0.177);
+}
+
 .titulo_destacados {
   font-family: fantasy;
   text-align: center;
@@ -86,8 +94,11 @@ section {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Times New Roman", Times, serif;
+  background-color: rgba(128, 128, 128, 0.177);
 }
 section .card {
   margin: 8px;
@@ -113,6 +124,7 @@ section .card .card-body {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2%;
 }
 .container_contacto .contact {
   flex: 1;
