@@ -49,6 +49,10 @@ header .Nombre_tienda {
 }
 
 /* Menú de navegación */
+nav {
+  border-radius: 30px;
+}
+
 .navbar-collapse {
   display: flex;
   justify-content: center;
@@ -73,8 +77,6 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(87, 87, 87, 0.3215686275);
-  border-radius: 10px;
 }
 nav ul li {
   margin-right: 15px;
@@ -85,6 +87,44 @@ nav ul li a {
   border-radius: 20px;
   padding: 5px 10px;
   font-size: 16px;
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 1px ridge #ffffff;
+  padding: 0.4rem;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3rem;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav ul li a::after, nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+nav ul li a::after {
+  top: -10px;
+  left: 3%;
+  background-color: transparent;
+}
+nav ul li a::before {
+  top: 80%;
+  left: 3%;
+  background-color: transparent;
+}
+nav ul li a:hover::before, nav ul li a:hover::after {
+  transform: scale(0);
+}
+nav ul li a:hover {
+  box-shadow: inset 0px 0px 25px #666666;
 }
 nav ul li.hover_li:hover a {
   background-color: #ffffff;
@@ -132,13 +172,60 @@ section .card {
   border-radius: 8px;
   overflow: hidden;
 }
-section .card img {
-  width: 100%;
-  height: auto;
-}
 section .card .card-body {
   padding: 10px;
   text-align: left;
+}
+section .card img {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  border: 3px ridge #000000;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section .card img::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+section .card img::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+section .card img:hover::before, section .card button:hover::after {
+  transform: scale(0);
+}
+section .card img:hover {
+  box-shadow: inset 0px 0px 25px #000000;
+}
+section .btn-primary {
+  color: #ffffff;
+  background-color: #131313;
+  border: solid white;
+}
+section .btn-primary:hover {
+  background-color: #303030;
+  border: solid rgb(0, 0, 0);
 }
 
 /* Contacto */
@@ -155,6 +242,21 @@ section .card .card-body {
 }
 .container_contacto .div-map {
   flex: 1;
+}
+.container_contacto button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 13px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 1s;
+  box-shadow: 6px 6px 12px #333333, -6px -6px 12px #000000;
+}
+.container_contacto button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 
 /* Estilos del footer */
