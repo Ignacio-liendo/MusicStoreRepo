@@ -1,0 +1,98 @@
+/* Estilos del main */
+h1 {
+    background-color: $background_color;
+  }
+  
+  .titulo_destacados {
+    font-family: fantasy;
+    text-align: center;
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    @include flex-center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: $background_color;
+  
+    /* Bucle para generar diferentes estilos de tarjetas */
+    @for $i from 1 through 3 {
+      .card:nth-child(#{$i}) {
+        border: 2px solid lighten($background_color, $i * 10%);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, $i * 0.1);
+      }
+    }
+  
+    .card {
+      margin: 8px;
+      flex: 1 1 calc(18rem + 16px); /* Ajusta el ancho para que se adapte dinámicamente */
+      max-width: 18rem; /* Asegura que las tarjetas no se expandan demasiado */
+      border: 1px solid #ddd;
+      @include border-radius(map-get($border-radii, card));
+      overflow: hidden;
+  
+      .card-body {
+        padding: 10px;
+        text-align: left;
+      }
+  
+      img {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        border: 3px ridge #000000;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        transition: 0.3s;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+  
+      img::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        background-color: #212121;
+        transition: 0.5s;
+        transform-origin: center;
+      }
+  
+      img::before {
+        content: "";
+        transform-origin: center;
+        position: absolute;
+        top: 80%;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        background-color: #212121;
+        transition: 0.5s;
+      }
+  
+      img:hover::before, button:hover::after {
+        transform: scale(0);
+      }
+  
+      img:hover {
+        box-shadow: inset 0px 0px 25px #000000;
+      }
+    }
+  
+    .btn-primary {
+      color: #ffffff;
+      background-color: #131313;
+      border: solid white;
+    }
+  
+    .btn-primary:hover {
+      background-color: #303030;
+      border: solid rgb(0, 0, 0);
+    }
+  }

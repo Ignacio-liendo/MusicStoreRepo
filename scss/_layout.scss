@@ -1,0 +1,6 @@
+/* Ajustes de grid para la estructura general */
+.container {
+    display: grid;
+    @include grid-template("header main footer", 1fr, auto 1fr auto);
+    height: 100vh;
+  }

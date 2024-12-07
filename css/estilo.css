@@ -37,6 +37,7 @@ header {
   font-size: 20px;
   position: relative;
 }
+
 header .logo {
   position: absolute;
   top: 10px;
@@ -44,6 +45,7 @@ header .logo {
   max-width: 115px;
   border-radius: 50%;
 }
+
 header .Nombre_tienda {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -53,21 +55,23 @@ nav {
   border-radius: 30px;
 }
 
-.navbar-collapse {
+nav .navbar-collapse {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar-toggler {
+nav .navbar-toggler {
   background-color: #2b2c2b !important;
   border-color: #ffffff !important;
 }
-.navbar-toggler:hover {
-  background-color: rgb(17.7931034483, 18.2068965517, 17.7931034483);
+
+nav .navbar-toggler:hover {
+  background-color: #121212;
   border-color: white;
 }
-.navbar-toggler .navbar-toggler-icon {
+
+nav .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
@@ -78,9 +82,11 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
+
 nav ul li {
   margin-right: 15px;
 }
+
 nav ul li a {
   color: #cecece;
   text-decoration: none;
@@ -101,6 +107,7 @@ nav ul li a {
   font-weight: bold;
   cursor: pointer;
 }
+
 nav ul li a::after, nav ul li a::before {
   content: "";
   position: absolute;
@@ -110,22 +117,27 @@ nav ul li a::after, nav ul li a::before {
   transition: 0.5s;
   transform-origin: center;
 }
+
 nav ul li a::after {
   top: -10px;
   left: 3%;
   background-color: transparent;
 }
+
 nav ul li a::before {
   top: 80%;
   left: 3%;
   background-color: transparent;
 }
+
 nav ul li a:hover::before, nav ul li a:hover::after {
   transform: scale(0);
 }
+
 nav ul li a:hover {
   box-shadow: inset 0px 0px 25px #666666;
 }
+
 nav ul li.hover_li:hover a {
   background-color: #ffffff;
   color: #2b2c2b;
@@ -152,18 +164,22 @@ section {
   background-color: rgba(128, 128, 128, 0);
   /* Bucle para generar diferentes estilos de tarjetas */
 }
+
 section .card:nth-child(1) {
-  border: 2px solid rgba(153.5, 153.5, 153.5, 0);
+  border: 2px solid rgba(154, 154, 154, 0);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 section .card:nth-child(2) {
   border: 2px solid rgba(179, 179, 179, 0);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 section .card:nth-child(3) {
-  border: 2px solid rgba(204.5, 204.5, 204.5, 0);
+  border: 2px solid rgba(205, 205, 205, 0);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 section .card {
   margin: 8px;
   flex: 1 1 calc(18rem + 16px); /* Ajusta el ancho para que se adapte dinámicamente */
@@ -172,10 +188,12 @@ section .card {
   border-radius: 8px;
   overflow: hidden;
 }
+
 section .card .card-body {
   padding: 10px;
   text-align: left;
 }
+
 section .card img {
   width: 100%;
   position: relative;
@@ -190,6 +208,7 @@ section .card img {
   font-weight: bold;
   cursor: pointer;
 }
+
 section .card img::after {
   content: "";
   position: absolute;
@@ -201,6 +220,7 @@ section .card img::after {
   transition: 0.5s;
   transform-origin: center;
 }
+
 section .card img::before {
   content: "";
   transform-origin: center;
@@ -212,17 +232,21 @@ section .card img::before {
   background-color: #212121;
   transition: 0.5s;
 }
+
 section .card img:hover::before, section .card button:hover::after {
   transform: scale(0);
 }
+
 section .card img:hover {
   box-shadow: inset 0px 0px 25px #000000;
 }
+
 section .btn-primary {
   color: #ffffff;
   background-color: #131313;
   border: solid white;
 }
+
 section .btn-primary:hover {
   background-color: #303030;
   border: solid rgb(0, 0, 0);
@@ -237,12 +261,15 @@ section .btn-primary:hover {
   margin: 0 auto;
   padding: 2%;
 }
+
 .container_contacto .contact {
   flex: 1;
 }
+
 .container_contacto .div-map {
   flex: 1;
 }
+
 .container_contacto button {
   color: #090909;
   padding: 0.7em 1.7em;
@@ -254,6 +281,7 @@ section .btn-primary:hover {
   transition: all 1s;
   box-shadow: 6px 6px 12px #333333, -6px -6px 12px #000000;
 }
+
 .container_contacto button:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
@@ -267,13 +295,13 @@ footer {
   padding: 20px;
   font-size: 18px;
 }
+
 footer .contact_logos {
   margin: 0 10px;
   position: relative;
   left: 45%;
 }
 
-/* Media Queries para adaptabilidad */
 @media (max-width: 1024px) {
   .container {
     padding: 10px;
@@ -310,6 +338,6 @@ footer .contact_logos {
   footer p, footer a {
     font-size: 14px;
   }
-}
+} 
 
 /*# sourceMappingURL=estilo.css.map */

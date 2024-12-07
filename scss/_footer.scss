@@ -1,0 +1,14 @@
+/* Estilos del footer */
+footer {
+    grid-area: footer;
+    color: #fffffffa;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  
+    .contact_logos {
+      margin: 0 10px;
+      position: relative;
+      left: 45%;
+    }
+  }

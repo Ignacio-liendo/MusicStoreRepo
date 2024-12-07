@@ -1,0 +1,51 @@
+@media (max-width: 1024px) {
+    .container {
+      padding: 10px;
+    }
+  
+    nav {
+      ul {
+        flex-direction: column;
+        align-items: center;
+  
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  
+    .contact_logos {
+      top: auto;
+      left: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 5px;
+    }
+  
+    header {
+      padding: 10px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+    }
+  
+    .Nombre_tienda {
+      font-size: 18px;
+    }
+  
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    footer {
+      p, a {
+        font-size: 14px;
+      }
+    }
+  }
+  

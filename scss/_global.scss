@@ -1,0 +1,12 @@
+/* Ajustes generales */
+* {
+    @include padding-margin-zero;
+    box-sizing: border-box;
+  }
+  
+  /* Aplicando un bucle para asignar colores desde un map */
+  @each $section, $color in $primary-colors {
+    #{$section} {
+      background-color: $color;
+    }
+  }

@@ -1,0 +1,46 @@
+/* Menú de navegación */
+nav {
+    border-radius: 30px;
+  
+    .navbar-collapse {
+      @include flex-center;
+    }
+  
+    .navbar-toggler {
+      background-color: map-get($primary-colors, header) !important;
+      border-color: #ffffff !important;
+  
+      &:hover {
+        background-color: darken(map-get($primary-colors, header), 10%);
+        border-color: lighten(#ffffff, 20%);
+      }
+  
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+      }
+    }
+  
+    ul {
+      list-style: none;
+      padding: 20px;
+      @include flex-center;
+  
+      li {
+        margin-right: 15px;
+  
+        a {
+          color: #cecece;
+          text-decoration: none;
+          @include border-radius(20px);
+          padding:  5px 10px;
+          font-size: 16px;
+          @include button-style;
+        }
+  
+        &.hover_li:hover a {
+          background-color: #ffffff;
+          color: map-get($primary-colors, header);
+        }
+      }
+    }
+  }

@@ -1,0 +1,21 @@
+/* Estilos del header */
+header {
+    grid-area: header;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+  
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      max-width: 115px;
+      @include border-radius(map-get($border-radii, logo));
+    }
+  
+    .Nombre_tienda {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }

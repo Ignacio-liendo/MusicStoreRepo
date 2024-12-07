@@ -1,0 +1,68 @@
+@mixin button-style {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 1px ridge #ffffff;
+    padding: 0.4rem;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3rem;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 95%;
+      height: 40%;
+      background-color: #212121;
+      transition: 0.5s;
+      transform-origin: center;
+    }
+  
+    &::after {
+      top: -10px;
+      left: 3%;
+      background-color: transparent;
+    }
+  
+    &::before {
+      top: 80%;
+      left: 3%;
+      background-color: transparent;
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      transform: scale(0);
+    }
+  
+    &:hover {
+      box-shadow: inset 0px 0px 25px #666666;
+    }
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+  
+  @mixin padding-margin-zero {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @mixin grid-template($areas, $columns, $rows) {
+    grid-template-areas: $areas;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+  }
